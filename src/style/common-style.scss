@@ -1,0 +1,205 @@
+$txt-color-common: #572CE7;
+
+
+//distance
+.pd-top-0{
+    padding-top: 0;
+}
+.pd-1rem{
+    padding: 1rem;
+}
+.pd-hor-1rem{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.pd-hor-2rem{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.pd-hor-3rem{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.pd-bot-3rem{
+    padding-bottom: 3rem;
+}
+
+
+.pd-top-1rem{
+    padding-top: 1rem;
+}
+
+.mg-0{
+    margin: 0;
+}
+
+.mg-top-10{
+    margin-top: 10px;
+
+}
+.mg-top-20{
+    margin-top: 20px;
+}
+
+.mg-top-50{
+    margin-top: 50px;
+}
+
+.mg-top-100{
+    margin-top: 100px;
+}
+
+.mg-right-10{
+    margin-right: 10px;
+}
+
+.line-h-0{
+    line-height: 0;
+}
+
+
+//color
+.txt-color-common{
+    color: $txt-color-common;
+}
+
+.cl-white{
+    color: white;
+}
+
+.cl-yel{
+    color: rgb(107, 107, 8);
+}
+
+
+
+
+//font
+.fs-1rem{
+    font-size: 1rem;
+}
+
+.fs-1dot2rem{
+    font-size: 1.2rem;
+}
+.fs-1dot5rem{
+    font-size: 1.5rem;
+}
+.fs-2rem{
+    font-size: 2rem;
+}
+.fs-2dot2rem{
+    font-size: 2.2rem;
+}
+.fs-3rem{
+    font-size: 3rem;
+}
+
+
+.fw-bold{
+    font-weight: bold;
+}
+
+
+//align
+.txt-center{
+    text-align: center;
+}
+.txt-right{
+    text-align: right;
+}
+
+
+
+//decorate
+.bd-rad-10{
+    border-radius: 10px;
+}
+.bd-rad-20{
+    border-radius: 20px;
+}
+
+.bd-none{
+    border: none;
+}
+
+.bd-1-sl-cl-common{
+    border: 1px solid $txt-color-common;
+}
+
+.ov-fl-hidden{
+    overflow: hidden;
+}
+
+
+.bg-gd-inventory{
+    background: #fceabb;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+
+//height
+.h-120{
+    height: 120px;
+}
+.h-150{
+    height: 150px;
+}
+
+.h-300{
+    height: 300px;
+}
+
+.h-500{
+    height: 500px;
+}
+
+.w-100p{
+    width: 100%;
+}
+
+
+//effect
+
+.trans-0dot4s{
+    transition: 0.4s;
+}
+
+.cu-po{
+    cursor: pointer;
+}
+.hv-1{
+    &:hover{
+        background-color: $txt-color-common;
+        color: white;
+        border:none;
+    }
+}
+
+
+.hv-shadow{
+    &:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border: none;
+    }
+}
+
+.active-header{
+    text-decoration: underline;
+}
+
+
+//position
+.pos-rel{
+    position: relative;
+}
+
+.pos-abs{
+    position: absolute;
+}
+
+.z-i-10{
+    z-index: 10;
+}

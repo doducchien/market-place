@@ -1,0 +1,1 @@
+export const CONNECT_METAMASK = 'CONNECT_METAMASK';
