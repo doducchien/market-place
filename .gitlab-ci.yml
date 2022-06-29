@@ -1,0 +1,23 @@
+variables:
+  WORK_DIR: /home/move-to-earn-fe/
+  BUILD_DIR: /var/www/move2earn/html
+  BRANCH: ${CI_COMMIT_REF_NAME}
+  GET_SOURCES_ATTEMPTS: 10
+  # CI_DEBUG_TRACE: "true"
+
+before_script:
+  - apt-get update -qq
+  - apt-get install -qq git
+  - 'which ssh-agent || ( apt-get install -qq openssh-client )'
+  - eval $(ssh-agent -s)
+  - ssh-add <(echo "$SSH_PRIVATE_KEY")
+  - mkdir -p ~/.ssh
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+deploy_develop:
+  environment:
+    name: develop
+  script:
+    - ssh root@$DEV_SERVER "if [ -d $WORK_DIR ]; then cd $WORK_DIR && git pull && rm -rf ./build && npm i && npm run build && rm -rf /var/www/move2earn/html/* && cp -R build/* /var/www/move2earn/html; fi"
+  only:
+    - develop
